@@ -1,0 +1,23 @@
+
+.exp p {
+  margin: 0.5em 0;
+}
+
+.model-fig {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.model-subfig {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+
+.model-fig::after {
+  content: "";
+  clear: both;
+  display: table;
+}

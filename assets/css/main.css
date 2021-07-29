@@ -1652,7 +1652,7 @@ input, select, textarea {
 
 		.image img {
 			display: block;
-			width: 100%;
+			max-width: 100%;
 		}
 
 		.image.centered {
@@ -1662,12 +1662,10 @@ input, select, textarea {
 
 			.image.centered img {
 				margin: 0 auto;
-				width: auto;
 			}
 
 		.image.featured {
 			display: block;
-			width: 100%;
 			margin: 0 0 2em 0;
 		}
 
@@ -1842,11 +1840,9 @@ ul.divided li:first-child {
 }
 
 .person .box .image.featured {
-	position: relative;
-	width: auto;
-	left: -1.25em;
-	top: -1.25em;
-	margin: 0 -2.5em 0 0;
+	left: 0;
+	top: 0;
+	margin: -1.25em -1.25em 1.25em -1.25em;
 }
 
 div.person a:hover {
@@ -2134,11 +2130,42 @@ div.person header p {
 	padding: 0 5em;
 }
 
+.project a.paperlinks {
+	text-decoration: none;
+}
+
+.project a.paperlinks:hover {
+	color: #5d5d5d;
+}
+
 .image.pitch.centered img {
     margin: 0 auto;
     width: auto;
     max-width: 70%;
 }
+
+/* Experiment grid on project page. */
+
+.exp-grid {
+	margin-top: 0;
+}
+
+.exp-grid > * {
+	padding-top: 10px;
+}
+
+.col-title {
+	font-size: 85%;
+	font-weight: bold;
+	padding-top: 0;
+}
+
+.col-title p {
+	margin: 0;
+	text-align: center;
+}
+
+/* Citation on project page. */
 
 .citation pre code {
   background-color: #f7f7f7;

@@ -58,7 +58,7 @@ The following fields can be added to the Bibtex to create links associated with 
 
 ## Project Pages
 
-You may host a project page by adding a folder to the `projects/` directory. There is a template you can copy for your convenience, which can be found in `projects/project_template.html`. Copy this template to `projects/my-project/index.html` and populate your information. The link to the project page is then `projects/my-project` for relative links within this repository, or http://progress.eecs.umich.edu/projects/my-project on the web.
+You may host a project page by adding a folder to the `projects/` directory. There is a template you can copy for your convenience, which can be found in `projects/_template/index.html`. Copy this template to `projects/my-project/index.html` and populate your information. The link to the project page is then `projects/my-project` for relative links within this repository, or http://progress.eecs.umich.edu/projects/my-project on the web.
 
 ## Design Credits
 

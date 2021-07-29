@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<!--
+    Dopetrope by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Laboratory for Progress</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <link rel="stylesheet" href="assets/dnbp.css" />
+
+    </head>
+    <body class="homepage is-preload">
+        <div id="page-wrapper">
+
+            <section id="header-project">
+                <h1><a href="https://progress.eecs.umich.edu/">Laboratory for Progress</a></h1>
+                <p>Perceptive Robotics and Grounded Reasoning Systems</a></p>
+            </section>
+
+            <section id="main">
+                <div class="container">
+
+                    <!-- Content -->
+                    <article class="box post project">
+                        <header>
+                            <h2>Differentiable Nonparametric Belief Propagation</h2>
+                            <p>Anthony&nbsp;Opipari, Chao&nbsp;Chen, Shoutian&nbsp;Wang, Jana&nbsp;Pavlasek, Karthik&nbsp;Desingh, Odest&nbsp;Chadwicke&nbsp;Jenkins</p>
+                        </header>
+
+                        <!-- Path to a pitch image. Can be removed if not needed. -->
+                        <div class="image pitch centered"><img src="images/pitch.jpg" alt="" /></div>
+
+                        <p>
+                            We present a differentiable approach to learn the probabilistic factors used for inference by a nonparametric belief propagation algorithm. Existing nonparametric belief propagation methods rely on domain-specific features encoded in the probabilistic factors of a graphical model. In this work, we replace each crafted factor with a differentiable neural network enabling the factors to be learned using an efficient optimization routine from labeled data. By combining differentiable neural networks with an efficient belief propagation algorithm, our method learns to maintain a set of marginal posterior samples using end-to-end training. We evaluate our differentiable nonparametric belief propagation (DNBP) method on a set of articulated pose tracking tasks and compare performance with a recurrent neural network. Results from this comparison demonstrate the effectiveness of using learned factors for tracking and suggest the practical advantage over hand-crafted approaches.
+                        </p>
+
+                        <!-- Links. -->
+                        <p>
+                            <a href="https://arxiv.org/abs/2101.05948" class="paperlinks"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp;
+                            <!-- Optional. -->
+                            <!-- <a href="#" class="paperlinks"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a> -->
+                        </p>
+
+                    </article>
+
+                    <article class="box post exp">
+                        <header>
+                            <h2>Experiments</h2>
+                            <p>DNBP tracks the belief of each node of a graph model over a sequence of input data. The edge parameters and observation likelihood are learned. We show selected results on two different graph models.</p>
+                        </header>
+
+                        <h3>Double Pendulum</h3>
+
+                        <p>The pendulum is composed of three nodes connected by two rigid links. It has two revolute joints. The model is shown below. Our algorithm tracks the marginal belief over the 2D location of each of the three nodes (yellow circles + the end effector).</p>
+
+                        <div class="model-fig">
+                            <div class="model-subfig">
+                                <figure>
+                                  <img src="images/pendulum_example.png" alt="" style="width:100%">
+                                  <figcaption>(a) The double pendulum.</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="model-subfig">
+                                <figure>
+                                  <img src="images/pendulum_model.png" alt="" style="width:100%">
+                                  <figcaption>(b) The pendulum graph.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <p>The following are random examples for the double pendulum. We compare our method (DNBP) to an LSTM baseline for each example.</p>
+
+                        <div class="row aln-center exp-grid">
+                            <div class="col-3 col-title">
+                                <p>Input Observation</p>
+                            </div>
+                            <div class="col-3 col-title">
+                                <p>Ground Truth</p>
+                            </div>
+                            <div class="col-3 col-title">
+                                <p>DNBP Belief</p>
+                            </div>
+                            <div class="col-3 col-title">
+                                <p>LSTM Prediction</p>
+                            </div>
+
+                            <!-- ROW -->
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/pendulum/5_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/pendulum/15_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/pendulum/25_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/pendulum/35_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/pendulum/45_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/pendulum/55_percent.gif" alt="" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <br/>
+                        <h3>Spider Experiment</h3>
+
+                        <p>The spider is composed of a root node connected to three legs by revolute joints. Each leg has two telescoping links connected by a revolute joint. The goal is to track the 2D location of the root node, three leg joints, and three end effectors (7 nodes total).</p>
+
+                        <div class="model-fig">
+                            <div class="model-subfig">
+                                <figure>
+                                  <img src="images/spider_example.png" alt="" style="width:100%">
+                                  <figcaption>(a) The spider.</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="model-subfig">
+                                <figure>
+                                  <img src="images/spider_model.png" alt="" style="width:100%">
+                                  <figcaption>(b) The spider graph.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <p>The following are random examples for the spider. We compare our method (DNBP) to an LSTM baseline for each example.</p>
+
+                        <div class="row aln-center exp-grid">
+                            <div class="col-3 col-title">
+                                <p>Input Observation</p>
+                            </div>
+                            <div class="col-3 col-title">
+                                <p>Ground Truth</p>
+                            </div>
+                            <div class="col-3 col-title">
+                                <p>DNBP Belief</p>
+                            </div>
+                            <div class="col-3 col-title">
+                                <p>LSTM Prediction</p>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/spider/5_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/spider/15_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/spider/25_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/spider/35_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/spider/45_percent.gif" alt="" />
+                                </div>
+                            </div>
+                            <!-- <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/spider/55_percent.gif" alt="" />
+                                </div>
+                            </div> -->
+
+                        </div>
+
+                        <br/>
+                        <h3>Entropy</h3>
+
+                        <p>A key benefit of DNBP is that it tracks <emph>belief</emph> over iterations. We can model the algorithm's uncertainty which tells us how much we should trust the estimate. Here is an illustration of the measured entropy in the estimate over iterations for an easy scene:</p>
+
+                        <div class="row aln-center exp-grid">
+                            <div class="col-12 col-title">
+                                <p>DNBP Entropy over Iterations</p>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/entropy/no_occlusion.gif" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Below, we add a significant occlusion to the observation. When the pendulum end effector is totally occluded, the entropy is high, demonstrating uncertainty in the estimate.</p>
+
+                        <div class="row aln-center exp-grid">
+                            <div class="col-12 col-title">
+                                <p>DNBP Entropy over Iterations</p>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="image experiment centered">
+                                    <img src="images/exp/entropy/occlusion.gif" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="box post">
+                        <header>
+                            <h2>Citation</h2>
+                        </header>
+
+                        <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
+                        <div class="citation">
+<pre><code>@article{opipari2021dnbp,
+  author = {Opipari, Anthony and Chen, Chao and Wang, Shoutian and Pavlasek, Jana and Desingh, Karthik and Jenkins, Odest Chadwicke},
+  title = {Differentiable Nonparametric Belief Propagation},
+  year = {2021},
+  journal={arXiv preprint arXiv:2101.05948}
+}</code></pre>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="footer">
+
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul class="links">
+                        <li>&copy; 2020. All rights reserved.</li><li>Design: Dopetrope by
+                    <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+
+    </body>
+</html>
