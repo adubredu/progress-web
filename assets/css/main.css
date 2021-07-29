@@ -1666,7 +1666,6 @@ input, select, textarea {
 
 		.image.featured {
 			display: block;
-			max-width: 100%;
 			margin: 0 0 2em 0;
 		}
 
@@ -1841,11 +1840,9 @@ ul.divided li:first-child {
 }
 
 .person .box .image.featured {
-	position: relative;
-	width: auto;
-	left: -1.25em;
-	top: -1.25em;
-	margin: 0 -2.5em 0 0;
+	left: 0;
+	top: 0;
+	margin: -1.25em -1.25em 1.25em -1.25em;
 }
 
 div.person a:hover {
