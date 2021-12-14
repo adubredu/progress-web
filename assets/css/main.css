@@ -1808,6 +1808,10 @@ p.pub {
 	margin-bottom: 0;
 }
 
+.pub i.fa.fa-star {
+	color: #FFCB05;
+}
+
 .pub a {
 	text-decoration: none;
 	color: #00274C;
