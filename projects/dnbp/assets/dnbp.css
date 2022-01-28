@@ -6,7 +6,7 @@
 .model-fig {
   display: block;
   margin: auto;
-  width: 50%;
+  width: 60%;
 }
 
 .model-subfig {
@@ -20,4 +20,17 @@
   content: "";
   clear: both;
   display: table;
+}
+
+.image video {
+  display: block;
+  max-width: 100%;
+}
+
+.image.centered video {
+  margin: 0 auto;
+}
+
+.box.post.project p {
+    padding: 0;
 }

@@ -27,22 +27,27 @@
                     <!-- Content -->
                     <article class="box post project">
                         <header>
-                            <h2>Differentiable Nonparametric Belief Propagation</h2>
+                            <h2>DNBP: Differentiable Nonparametric Belief Propagation</h2>
                             <p>Anthony&nbsp;Opipari, Chao&nbsp;Chen, Shoutian&nbsp;Wang, Jana&nbsp;Pavlasek, Karthik&nbsp;Desingh, Odest&nbsp;Chadwicke&nbsp;Jenkins</p>
                         </header>
 
                         <!-- Path to a pitch image. Can be removed if not needed. -->
-                        <div class="image pitch centered"><img src="images/pitch.jpg" alt="" /></div>
+                        <div class="image centered"><img src="images/dnbp_pitch.jpeg" alt="" /></div>
 
                         <p>
-                            We present a differentiable approach to learn the probabilistic factors used for inference by a nonparametric belief propagation algorithm. Existing nonparametric belief propagation methods rely on domain-specific features encoded in the probabilistic factors of a graphical model. In this work, we replace each crafted factor with a differentiable neural network enabling the factors to be learned using an efficient optimization routine from labeled data. By combining differentiable neural networks with an efficient belief propagation algorithm, our method learns to maintain a set of marginal posterior samples using end-to-end training. We evaluate our differentiable nonparametric belief propagation (DNBP) method on a set of articulated pose tracking tasks and compare performance with a recurrent neural network. Results from this comparison demonstrate the effectiveness of using learned factors for tracking and suggest the practical advantage over hand-crafted approaches.
+                            We present a differentiable approach to learn the probabilistic factors used for inference by a nonparametric belief propagation algorithm.
+                            Existing nonparametric belief propagation methods rely on domain-specific features encoded in the probabilistic factors of a graphical model.
+                            In this work, we replace each crafted factor with a differentiable neural network enabling the factors to be learned using an efficient optimization routine from labeled data.
+                            By combining differentiable neural networks with an efficient belief propagation algorithm, our method learns to maintain a set of marginal posterior samples using end-to-end training.
+                            We evaluate our differentiable nonparametric belief propagation (DNBP) method on a set of articulated pose tracking tasks and compare performance with learned baselines.
+                            Results from these experiments demonstrate the effectiveness of using learned factors for tracking and suggest the practical advantage over hand-crafted approaches.
                         </p>
 
                         <!-- Links. -->
                         <p>
-                            <a href="https://arxiv.org/abs/2101.05948" class="paperlinks"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp;
-                            <!-- Optional. -->
-                            <!-- <a href="#" class="paperlinks"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a> -->
+                            <a href="https://arxiv.org/abs/2101.05948" class="paperlinks"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
+                            <!-- <a href="#" class="paperlinks"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp; -->
+                            <a href="#cite" class="paperlinks"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
                         </p>
 
                     </article>
@@ -60,14 +65,14 @@
                         <div class="model-fig">
                             <div class="model-subfig">
                                 <figure>
-                                  <img src="images/pendulum_example.png" alt="" style="width:100%">
+                                  <img src="images/pendulum_example.jpeg" alt="" style="width:100%">
                                   <figcaption>(a) The double pendulum.</figcaption>
                                 </figure>
                             </div>
 
                             <div class="model-subfig">
                                 <figure>
-                                  <img src="images/pendulum_model.png" alt="" style="width:100%">
+                                  <img src="images/pendulum_model.jpeg" alt="" style="width:100%">
                                   <figcaption>(b) The pendulum graph.</figcaption>
                                 </figure>
                             </div>
@@ -138,7 +143,7 @@
 
                             <div class="model-subfig">
                                 <figure>
-                                  <img src="images/spider_model.png" alt="" style="width:100%">
+                                  <img src="images/spider_model.jpeg" alt="" style="width:100%">
                                   <figcaption>(b) The spider graph.</figcaption>
                                 </figure>
                             </div>
@@ -224,10 +229,116 @@
                             </div>
                         </div>
 
+                        <h3>Hand Pose Tracking</h3>
+
+                        <p>
+                            Below, DNBP is evaluated on randomly sampled sequences of the hand tracking task. The point-wise estimate produced by DNBP as well as the marginal uncertainty associated with the estimate of each finger joint is visualized. Marginal uncertainty is calculated from the marginal belief estimates of DNBP as 1 standard deviation in the x and y dimensions respectively. Uncertainty in the depth dimension is not visualized.
+                        </p>
+
+                        <div class="image centered"><img src="images/exp/hand_tracking/hand_uncertainty.png" alt="" /></div>
+
+                        <h4>Successful Estimations</h4>
+
+                        <p>
+                            In this and the following section, additional qualitative output from DNBP on the hand tracking task is included. Collectively, the example sequences that follow were randomly sampled but have been grouped into cases of subjective 'success' and 'failure' for clarity.
+                            Notably in both success and failure cases, the uncertainty reported by DNBP is inspected. In the middle row of each video, DNBP's uncertainty is illustrated qualitatively for each finger joint as a colored ellipse corresponding to 1 standard deviation in the x and y dimensions as calculated from the covariance of the corresponding marginal belief particles. As a quantitative measure of uncertainty, the bottom row of each video displays the entropy associated with DNBP's marginal belief estimate for each finger joint.
+                        </p>
+
+                        <div class="row aln-center">
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/success_cases/s_viz_video_2.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/success_cases/s_viz_video_3.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/success_cases/s_viz_video_4.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/success_cases/s_viz_video_5.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/success_cases/s_viz_video_8.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h4>Failure Cases</h4>
+
+                        <div class="row aln-center">
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/failure_cases/f_viz_video_0.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/failure_cases/f_viz_video_1.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/failure_cases/f_viz_video_6.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/failure_cases/f_viz_video_7.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="image centered">
+                                    <video controls>
+                                      <source src="images/exp/hand_tracking/failure_cases/f_viz_video_9.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+
                     </article>
 
                     <article class="box post">
-                        <header>
+                        <header id="cite">
                             <h2>Citation</h2>
                         </header>
 
