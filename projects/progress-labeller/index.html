@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+    Dopetrope by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Laboratory for Progress</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    </head>
+    <body class="homepage is-preload">
+        <div id="page-wrapper">
+
+            <section id="header-project">
+                <h1><a href="https://progress.eecs.umich.edu/">Laboratory for Progress</a></h1>
+                <p>Perceptive Robotics and Grounded Reasoning Systems</a></p>
+            </section>
+
+            <section id="main">
+                <div class="container">
+
+                    <!-- Content -->
+                    <article class="box post project">
+                        <header>
+                            <h2>ProgressLabeller: Visual Data Stream Annotation for Training Object-Centric 3D Perception</h2>
+                            <p>Xiaotong Chen, Huijie Zhang, Stanley Lewis, Odest Chadwicke Jenkins</p>
+                        </header>
+
+                        <!-- Path to a pitch image. Can be removed if not needed. -->
+                        <div class="image centered"><img src="images/progresslabeller_teaser.png" alt="" /></div>
+
+                        <p>
+                            Visual perception tasks often require vast amounts of labelled data, including 3D poses and image space segmentation masks. The process of creating such training data sets can prove difficult or time-intensive to scale up to efficacy for general use. Consider the task of pose estimation for rigid objects. Deep neural network based approaches have shown good performance when trained on large, public datasets. However, adapting these networks for other novel objects, or fine-tuning existing models for different environments, requires significant time investment to generate newly labelled instances. Towards this end, we propose ProgressLabeller as a method for more efficiently generating large amounts of 6D pose training data from color images sequences for custom scenes in a scalable manner. ProgressLabeller is intended to also support transparent or translucent objects, for which the previous methods based on depth dense reconstruction will fail. 
+                            We demonstrate the effectiveness of ProgressLabeller by rapidly create a dataset of over 1M samples with which we fine-tune a state-of-the-art pose estimation network in order to markedly improve the downstream robotic grasp success rates.
+ProgressLabeller will be made publicly available soon.
+                        </p>
+
+                        <!-- Links. -->
+                        <p>
+                            <a href="https://drive.google.com/file/d/10Lo2Ybpluod_D03Ur6ieyn5GGMc7x7Nu/view?usp=sharing" class="paperlinks"><i class="far fa-file-pdf"></i> Paper</a> &nbsp;&nbsp;
+                            <!-- Optional. -->
+                            <a href="#cite" class="paperlinks"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
+                        </p>
+
+                    </article>
+
+                    <article class="box post">
+                        <header>
+                            <h2>Annotation Interface</h2>
+                        </header>
+                        <p>Different from methods that align object 3D models with reconstructed point clouds, our system created a multi-view graphical user interface that overlays the object model's projection onto the original RGB images, so that the object pose errors could be easily detected from areas with misalignment of object texture, silhouette and boundary, as shown below. Compared to depth reconstructed based methods, the pose label accuracy is improved based on higher accuracy of RGB than depth sensing. Besides, the system can also be used to label scenes with unreliable depth from transparent objects and backgrounds.</p>
+                        <div class="image centered"><img src="images/blender_gui.png" alt="" width="75%" height="75%"/></div>
+                        The image above shows the Blender interface. Users can freely move or rotate objects to align with RGB images from multiple views. The top-left view shows the aligned object models with rendered texture at labelled poses. The bottom-left view and top-right view show the silhouettes and boundaries respectively at the same camera view, and the bottom-right view shows the boundaries from another view for validation.
+                    </article>
+
+                    <article class="box post">
+                        <header>
+                            <h2>Experiments</h2>
+                        </header>
+                        <p>We evaluated ProgressLabeller with several metrics: accuracy and time on labelling public datasets; pose estimation accuracy and downstream robotic grasping success rate improvement over the pretrained deep object pose estimator.</p>
+                        <header>
+                            <h3>Annotation Accuracy on Public Datasets</h3>
+                        </header>
+                        <div class="image centered"><img src="images/table_1.png" alt=""/></div>
+
+                        From the comparison, we see both labellers took similar amount of time to annotate data streams, while ProgressLabeller is more accurate and robust in most streams. LabelFusion has higher accuracy on YCB-Video dataset, which has a large feature-based pixel distance.
+
+                        <header>
+                            <h3>Cross-sensor Validation on Pose Estimation Accuracy</h3>
+                        </header>
+                        <p></p>
+                        <div class="image centered"><img src="images/table_2.png" alt=""/></div>
+                        We report the AUC for ADD and ADD-S metrics between 0 and 10cm. We find the fine-tuned dataset recognizes the sensor modality and noise difference between 3 cameras as the test set ADD and ADD-S are mostly the highest on the same training set.
+                        <header>
+                            <h3>Pose and Grasp Improvement through Fine-tuning</h3>
+                        </header>
+                        <p></p>
+                        <div class="image centered"><img src="images/table_3.png" alt=""/></div>
+
+                        We repeated grasping on every tolerance for 5 times based on the pose estimates. Overall, the fine-tuning over ProgressLabeller data improves the grasping success rate the most, compared with data generated using LabelFusion and Blenderproc.
+
+                        Below is a table cleaning task accomplished by pose-based grasping.
+                        
+                        <div class="image centered"><img src="images/fetch_table_cleaning.png" alt="" width="75%" height="75%"/></div>
+
+                    </article>
+
+                    <article class="box post">
+                        <header>
+                            <h2>More Applications</h2>
+                        </header>
+                        <header>
+                            <h3>Collection and Annotation of Transparent Dataset</h3>
+                        </header>
+                        <div class="image centered"><img src="images/trans_demo.png" alt="" width="80%" height="80%"/></div>
+                        The labelling on transparent champagne cups. When there is no reliable depth that can be used to align the object 3D model with (top-left), ProgressLabeller enables checking the pose validity by re-projection object models (bottom-left) to RGB image (top-right) to verify the match (bottom-right) in two views.
+                        <header>
+                            <h3>Training Neural Rendering Systems from Collected Data</h3>
+                        </header>
+                        <div class="image centered"><img src="images/nsvf1.png" alt=""/></div>
+                        We train a neural rendering model (NSVF) over collected data on the Cheetiz box. Above is the comparison of best (left) and worst (right) validation pose renderings from the NSVF model. The smaller images with black background on top corners are the ground truth masks, and those on bottom corners are rendered output from NSVF, and the middle larger images are the renderings imposed onto the original captured image in greyscale. The best image (left) had an average pixelwise L2 error of 0.0067, and the worst (right) had an average pixelwise L2 error of 0.1867.
+                    </article>
+
+                    <!-- <article class="box post">
+                        <header>
+                            <h2>Video</h2>
+                        </header>
+                        <div class="video-container">
+                            <iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PLDutmfAv2lfYZzuxA9BT9Y6rvCofTAGuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </article> -->
+
+                    <article class="box post">
+                        <header id="cite">
+                            <h2>Citation</h2>
+                        </header>
+
+                        <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
+                        <div class="citation">
+<pre><code>@article{chen2022progresslabeller,
+author = {Chen, Xiaotong and Zhang, Huijie and Yu, Zeren and Lewis, Stanley and Jenkins, Odest Chadwicke},
+title = {Differentiable Nonparametric Belief Propagation},
+year = {2021},
+journal={arXiv preprint arXiv:2101.05948}
+}</code></pre>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="footer">
+
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul class="links">
+                        <li>&copy; 2020. All rights reserved.</li><li>Design: Dopetrope by
+                    <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+
+    </body>
+</html>
