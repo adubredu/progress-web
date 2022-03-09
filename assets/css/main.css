@@ -1678,9 +1678,11 @@ input, select, textarea {
 
 .slideshow-container {
 	margin-bottom: 1em;
+	text-align: center;
 }
 
 .image-slideshow-container {
+	display: inline-block;
 	max-width: 90%;
 	position: relative;
 	height: auto;
@@ -1706,7 +1708,10 @@ input, select, textarea {
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
 }
 
 .prev:hover, .next:hover {
