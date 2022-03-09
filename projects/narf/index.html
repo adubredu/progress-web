@@ -10,8 +10,8 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="../../assets/css/main.css" />
-
     </head>
+
     <body class="homepage is-preload">
         <div id="page-wrapper">
 
@@ -92,6 +92,41 @@
                         </div>
                     </article>
 
+                    <article class="box post exp">
+                        <header>
+                            <h2>Pose &amp; Configuration Refinement</h2>
+                        </header>
+
+                        <p>
+                            The NARF rendering pipeline is fully differentiable.
+                            We perform 6 DoF pose and configuration refinement by computing Mean Squared Error loss between the rendering at an initial hypothesis and the observation image.
+                            The initial pose and configuration is then refined iteratively through Stochastic Gradient Descent using the gradient of the MSE loss.
+                        </p>
+
+                        <div class="slideshow-container">
+                            <div class="image-slideshow-container">
+                                <div class="image slideshow"><img src="images/pose/3_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/4_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/5_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/6_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/10_config.gif" alt="" /></div>
+
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+
+                            <!-- The dots/circles -->
+                            <div style="text-align:center">
+                              <span class="dot" onclick="currentSlide(1)"></span>
+                              <span class="dot" onclick="currentSlide(2)"></span>
+                              <span class="dot" onclick="currentSlide(3)"></span>
+                              <span class="dot" onclick="currentSlide(4)"></span>
+                              <span class="dot" onclick="currentSlide(5)"></span>
+                            </div>
+                        </div>
+
+                    </article>
+
                     <!-- <article class="box post"> -->
                         <!-- <header> -->
                             <!-- <h2>Video</h2> -->
@@ -137,6 +172,15 @@
             </section>
 
         </div>
+
+        <!-- Scripts -->
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/carousel.js"></script>
+        <script>
+            (function($) {
+                carousel(slideIndex, 8000);
+            })(jQuery);
+        </script>
 
     </body>
 </html>
