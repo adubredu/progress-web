@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>Laboratory for Progress</title>
+        <title>NARF: Neural Articulated Radiance Fields</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="../../assets/css/main.css" />
@@ -52,6 +52,46 @@
 
                     </article>
 
+                    <article class="box post exp">
+                        <header>
+                            <h2>Configuration-Aware Renderings</h2>
+                        </header>
+
+                        <p>
+                            NARF is trainined using labelled training images containing object poses, masks, and ground truth configurations.
+                            The articulation model of the object is required at training time.
+                            At testing time, NARF can render images of articulated objects at arbitrary poses and articulations.
+                        </p>
+
+                        <p>
+                            The following are examples of NARF configuration-aware renderings of articulated objects from the <a href="../tool-parts/index.html">Progress Tools dataset</a>.
+                            These models were trained with only a small number of example configurations in the training data.
+                        </p>
+
+                        <div class="row aln-center">
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/clamp.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/red_pliers.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/grey_pliers.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/longnose_pliers.gif" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                     <!-- <article class="box post"> -->
                         <!-- <header> -->
                             <!-- <h2>Video</h2> -->
@@ -89,7 +129,7 @@
                 <!-- Copyright -->
                 <div id="copyright">
                     <ul class="links">
-                        <li>&copy; 2020. All rights reserved.</li><li>Design: Dopetrope by
+                        <li>&copy; 2022. All rights reserved.</li><li>Design: Dopetrope by
                     <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
                     </ul>
                 </div>
