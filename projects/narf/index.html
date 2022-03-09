@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+    Dopetrope by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>NARF: Neural Articulated Radiance Fields</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+    </head>
+
+    <body class="homepage is-preload">
+        <div id="page-wrapper">
+
+            <section id="header-project">
+                <h1><a href="https://progress.eecs.umich.edu/">Laboratory for Progress</a></h1>
+                <p>Perceptive Robotics and Grounded Reasoning Systems</a></p>
+            </section>
+
+            <section id="main">
+                <div class="container">
+
+                    <!-- Content -->
+                    <article class="box post project">
+                        <header>
+                            <h2>NARF: Neural Articulated Radiance Fields for Configuration-Aware Rendering</h2>
+                            <p>Stanley Lewis, Jana Pavlasek, Odest Chadwicke Jenkins</p>
+                        </header>
+
+                        <!-- Pitch image. -->
+                        <div class="image pitch centered"><img src="images/pitch.png" alt="" /></div>
+
+                        <p>
+                            Articulated objects pose a unique challenge for robotic perception and manipulation.
+                            Their larger number of degrees-of-freedom makes localization and other tasks more computationaly difficult, while also making the process of real-world dataset collection unscalable.
+                            With the aim of introducing a tool to address these scalability issues, we propose Neural Articulated Radiance Fields (NARF): a pipeline which uses a fully-differentiable, configuration parameterized Neural Radiance Field (NeRF) as a means of providing high quality renderings of articulated objects.
+                            NARF requires no explicit knowledge of the object structure at inference time.
+                            We propose a parts-based training mechanism which allows for creating object rendering models that generalize well across the configuration space even if the underlying training data has as few as one configuration represented.
+                            We demonstrate the usefulness of this approach by training configurable renderers on a real-world articulated tool data collected via a Fetch Mobile Manipulator robot.
+                            We then show the applicability of the model to generative or gradient-descent based inference methods by extracting configuration estimates and fine tuning object pose from an initial standard 6 degree-of-freedom rigid-body pose estimate.
+                        </p>
+
+                        <!-- Links. -->
+                        <!-- <p> -->
+                            <!-- <a href="#" class="paperlinks"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp; -->
+                            <!-- Optional. -->
+                            <!-- <a href="#" class="paperlinks"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a> -->
+                        <!-- </p> -->
+
+                    </article>
+
+                    <article class="box post exp">
+                        <header>
+                            <h2>Configuration-Aware Renderings</h2>
+                        </header>
+
+                        <p>
+                            NARF is trainined using labelled training images containing object poses, masks, and ground truth configurations.
+                            The articulation model of the object is required at training time.
+                            At testing time, NARF can render images of articulated objects at arbitrary poses and articulations.
+                        </p>
+
+                        <p>
+                            The following are examples of NARF configuration-aware renderings of articulated objects from the <a href="../tool-parts/index.html">Progress Tools dataset</a>.
+                            These models were trained with only a small number of example configurations in the training data.
+                        </p>
+
+                        <div class="row aln-center">
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/clamp.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/red_pliers.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/grey_pliers.gif" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="image centered">
+                                    <img src="images/articulations/longnose_pliers.gif" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="box post exp">
+                        <header>
+                            <h2>Pose &amp; Configuration Refinement</h2>
+                        </header>
+
+                        <p>
+                            The NARF rendering pipeline is fully differentiable.
+                            We perform 6 DoF pose and configuration refinement by computing Mean Squared Error loss between the rendering at an initial hypothesis and the observation image.
+                            The initial pose and configuration is then refined iteratively through Stochastic Gradient Descent using the gradient of the MSE loss.
+                        </p>
+
+                        <p>
+                            In the examples below, the 6 DoF pose of the clamp is initialized to an estimate given by an external module.
+                            The configuration of the clamp is initialized randomly within its articulation constraints.
+                            We are able to recover the configuration and refine the 6 DoF pose using SGD over the gradients of the NARF model.
+                        </p>
+
+                        <div class="slideshow-container">
+                            <div class="image-slideshow-container">
+                                <div class="image slideshow"><img src="images/pose/3_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/4_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/5_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/6_config.gif" alt="" /></div>
+                                <div class="image slideshow"><img src="images/pose/10_config.gif" alt="" /></div>
+
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+
+                            <!-- The dots/circles -->
+                            <div style="text-align:center">
+                              <span class="dot" onclick="currentSlide(1)"></span>
+                              <span class="dot" onclick="currentSlide(2)"></span>
+                              <span class="dot" onclick="currentSlide(3)"></span>
+                              <span class="dot" onclick="currentSlide(4)"></span>
+                              <span class="dot" onclick="currentSlide(5)"></span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- <article class="box post"> -->
+                        <!-- <header> -->
+                            <!-- <h2>Video</h2> -->
+                        <!-- </header> -->
+
+                        <!-- Link to video on YouTube. -->
+                        <!-- To get your video link, go to your video and click "Share" -> "Embed" to get this iframe.
+                             You can remove width and height. -->
+                        <!-- <div class="video-container"> -->
+                            <!-- <iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PLDutmfAv2lfYZzuxA9BT9Y6rvCofTAGuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- </div> -->
+                    <!-- </article> -->
+
+                    <!-- <article class="box post"> -->
+                        <!-- <header> -->
+                            <!-- <h2>Citation</h2> -->
+                        <!-- </header> -->
+
+                        <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
+                        <!-- <div class="citation"> -->
+<!-- <pre><code>@inproceedings{tag, -->
+  <!-- author = {Last, First and Last, First and ...}, -->
+  <!-- title = {Paper title}, -->
+  <!-- year = {2020}, -->
+  <!-- ... -->
+<!-- }</code></pre> -->
+                        <!-- </div> -->
+                    <!-- </article> -->
+
+                <!-- </div> -->
+            </section>
+
+            <section id="footer">
+
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul class="links">
+                        <li>&copy; 2022. All rights reserved.</li><li>Design: Dopetrope by
+                    <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/carousel.js"></script>
+        <script>
+            (function($) {
+                carousel(slideIndex, 8000);
+            })(jQuery);
+        </script>
+
+    </body>
+</html>
