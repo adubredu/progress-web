@@ -103,6 +103,12 @@
                             The initial pose and configuration is then refined iteratively through Stochastic Gradient Descent using the gradient of the MSE loss.
                         </p>
 
+                        <p>
+                            In the examples below, the 6 DoF pose of the clamp is initialized to an estimate given by an external module.
+                            The configuration of the clamp is initialized randomly within its articulation constraints.
+                            We are able to recover the configuration and refine the 6 DoF pose using SGD over the gradients of the NARF model.
+                        </p>
+
                         <div class="slideshow-container">
                             <div class="image-slideshow-container">
                                 <div class="image slideshow"><img src="images/pose/3_config.gif" alt="" /></div>
