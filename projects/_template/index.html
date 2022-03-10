@@ -25,24 +25,72 @@
 
                     <!-- Content -->
                     <article class="box post project">
+                        <!-- TITLE -->
                         <header>
                             <h2>Paper Title</h2>
-                            <p>First Author, Second Author, Third Author...</p>
                         </header>
 
-                        <!-- Path to a pitch image. Can be removed if not needed. -->
+                        <!-- AUTHORS -->
+                        <div class="row aln-center project-authors">
+                            <!-- Add a div entry exactly as below for each author (keep all classes).
+
+                                The link belonging to the author name should point to the author's webpage. Remove the
+                                link if the author doesn't have one. The affiliation should be the institution the
+                                author belongs to, ie "University of Michigan."
+                            -->
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="#">First Author</a></h3>
+                                <p>Affiliation</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="#">Second Author</a></h3>
+                                <p>Affiliation</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="#">Third Author</a></h3>
+                                <p>Affiliation</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="#">Fourth Author</a></h3>
+                                <p>Affiliation</p>
+                            </div>
+                        </div>
+
+                        <!-- Path to a pitch image. Can be removed if not needed.
+
+                            If you have images to include on this webpage, you should make a subfolder called "images"
+                            in your project page folder. Then the (relative) path would look like: "images/MY_IMG.png".
+
+                            By default, this image will not take up the whole box, which is more aesthetic. If your
+                            pitch figure is particularly long and you need it to fill the whole horizontal space,
+                            remove the "pitch" class.
+                        -->
                         <div class="image pitch centered"><img src="../../images/headshots/fetch.jpg" alt="" /></div>
 
-                        <p>
-                            Abstract.
-                        </p>
+                        <!-- ABSTRACT -->
+                        <!-- If your pitch figure is wide and you want the abstract to match, add the class "wide" next
+                             to the class "abstract" below.-->
+                        <div class="abstract">
+                            <p>
+                                Abstract.
+                            </p>
+                        </div>
 
-                        <!-- Links. -->
-                        <p>
-                            <a href="#" class="paperlinks"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp;
-                            <!-- Optional. -->
-                            <a href="#" class="paperlinks"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a>
-                        </p>
+                        <!-- PAPER LINKS -->
+                        <!-- If your pitch figure and abstract are wide, also add the the class "wide" next to the
+                             class "paperlinks" below. Include whatever links are relevant.-->
+                        <div class="paperlinks">
+                            <p>
+                                <a href="#"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
+                                <!-- Optional. -->
+                                <a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp;
+                                <a href="#"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp;
+                                <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
+                            </p>
+                        </div>
 
                     </article>
 
@@ -60,7 +108,7 @@
                     </article>
 
                     <article class="box post">
-                        <header>
+                        <header id="cite">
                             <h2>Citation</h2>
                         </header>
 
@@ -83,7 +131,7 @@
                 <!-- Copyright -->
                 <div id="copyright">
                     <ul class="links">
-                        <li>&copy; 2020. All rights reserved.</li><li>Design: Dopetrope by
+                        <li>&copy; 2022. All rights reserved.</li><li>Design: Dopetrope by
                     <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
                     </ul>
                 </div>
