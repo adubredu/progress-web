@@ -25,30 +25,51 @@
 
                     <!-- Content -->
                     <article class="box post project">
+                        <!-- TITLE -->
                         <header>
                             <h2>NARF: Neural Articulated Radiance Fields for Configuration-Aware Rendering</h2>
-                            <p>Stanley Lewis, Jana Pavlasek, Odest Chadwicke Jenkins</p>
                         </header>
+
+                        <!-- AUTHORS -->
+                        <div class="row aln-center project-authors">
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3>Stanley Lewis</h3>
+                                <p>University of Michigan</p>
+                            </div>
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="http://janapavlasek.com/">Jana Pavlasek</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://web.eecs.umich.edu/~ocj/">Odest Chadwicke Jenkins</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+                        </div>
 
                         <!-- Pitch image. -->
                         <div class="image pitch centered"><img src="images/pitch.png" alt="" /></div>
 
-                        <p>
-                            Articulated objects pose a unique challenge for robotic perception and manipulation.
-                            Their larger number of degrees-of-freedom makes localization and other tasks more computationaly difficult, while also making the process of real-world dataset collection unscalable.
-                            With the aim of introducing a tool to address these scalability issues, we propose Neural Articulated Radiance Fields (NARF): a pipeline which uses a fully-differentiable, configuration parameterized Neural Radiance Field (NeRF) as a means of providing high quality renderings of articulated objects.
-                            NARF requires no explicit knowledge of the object structure at inference time.
-                            We propose a parts-based training mechanism which allows for creating object rendering models that generalize well across the configuration space even if the underlying training data has as few as one configuration represented.
-                            We demonstrate the usefulness of this approach by training configurable renderers on a real-world articulated tool data collected via a Fetch Mobile Manipulator robot.
-                            We then show the applicability of the model to generative or gradient-descent based inference methods by extracting configuration estimates and fine tuning object pose from an initial standard 6 degree-of-freedom rigid-body pose estimate.
-                        </p>
+                        <!-- ABSTRACT -->
+                        <div class="abstract">
+                            <p>
+                                Articulated objects pose a unique challenge for robotic perception and manipulation.
+                                Their larger number of degrees-of-freedom makes localization and other tasks more computationaly difficult, while also making the process of real-world dataset collection unscalable.
+                                With the aim of introducing a tool to address these scalability issues, we propose Neural Articulated Radiance Fields (NARF): a pipeline which uses a fully differentiable, configuration parameterized Neural Radiance Field (NeRF) as a means of providing high quality renderings of articulated objects.
+                                NARF requires no explicit knowledge of the object structure at inference time.
+                                We propose a parts-based training mechanism which allows for creating object rendering models that generalize well across the configuration space even if the underlying training data has as few as one configuration represented.
+                                We demonstrate the usefulness of this approach by training configurable renderers on a real-world articulated tool data collected via a Fetch Mobile Manipulator robot.
+                                We then show the applicability of the model to generative or gradient-descent based inference methods by extracting configuration estimates and fine tuning object pose from an initial standard 6 degree-of-freedom rigid-body pose estimate.
+                            </p>
+                        </div>
 
                         <!-- Links. -->
-                        <!-- <p> -->
-                            <!-- <a href="#" class="paperlinks"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp; -->
-                            <!-- Optional. -->
-                            <!-- <a href="#" class="paperlinks"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a> -->
-                        <!-- </p> -->
+                        <div class="paperlinks">
+                            <p>
+                                <a href="#"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp;
+                                <!-- Optional. -->
+                                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a>
+                            </p>
+                        </div>
 
                     </article>
 
