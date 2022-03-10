@@ -2131,17 +2131,62 @@ div.person header p {
 	line-height: 1em;
 }
 
-.box.post.project p {
-	padding: 0 5em;
+.project > .abstract {
+	width: 80%;
+	margin: 0 auto;
+}
+	.project > .abstract.wide {
+		width: 100%;
+	}
+
+.project > .paperlinks {
+	width: 80%;
+	margin: 0 auto;
 }
 
-.project a.paperlinks {
-	text-decoration: none;
+	.project > .paperlinks.wide {
+		width: 100%;
+	}
+
+	.project > .paperlinks p {
+		margin: 0;
+	}
+	.project > .paperlinks a {
+		text-decoration: none;
+	}
+	.project > .paperlinks a:hover {
+		color: #5d5d5d;
+	}
+
+.project-authors {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
-.project a.paperlinks:hover {
-	color: #5d5d5d;
-}
+	.row.project-authors {
+		margin-top: -1em;
+		margin-left: -1em;
+	}
+
+	.row.project-authors > .project-author {
+		padding: 1em 0 0 1em;
+	}
+		.project-author p {
+			padding: 0;
+			margin-bottom: 0;
+			font-size: medium;
+		}
+		.project-author h3 {
+			padding: 0;
+			font-size: large;
+		}
+			.project-author h3 a {
+				text-decoration: underline;
+			}
+			.project-author h3 a:hover {
+				color: #FFCB05;
+				text-decoration: none;
+			}
 
 .image.pitch.centered img {
     margin: 0 auto;
