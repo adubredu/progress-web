@@ -1874,8 +1874,9 @@ div.person header p {
 		position: relative;
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
-		padding: 5em 0 4em 0;
-		text-align: center;
+		padding: 15px 40px;
+		display: flex;
+		align-items: center;
 	}
 
 		#header h1 {
@@ -1886,10 +1887,19 @@ div.person header p {
 			line-height: 1;
 		}
 
+		#header .logo {
+			flex: auto;
+		}
+
+		#header .logo img {
+			width: 300px;
+		}
+
 /* Nav */
 
 	#nav {
-		margin: 2.5em 0 0 0;
+		flex: auto;
+		text-align: right;
 	}
 
 		#nav > ul {
@@ -1899,7 +1909,6 @@ div.person header p {
 
 			#nav > ul > li {
 				display: inline-block;
-				font-style: italic;
 				margin: 0 0.35em 0 0.35em;
 				padding: 0 0.5em;
 			}
@@ -1927,7 +1936,7 @@ div.person header p {
 				#nav > ul > li.current > a {
 					background: #00274C;
 					color: #FFCB05 !important;
-					font-weight: 700;
+					font-weight: 500;
 				}
 
 	.dropotron {
@@ -2263,12 +2272,6 @@ div.person header p {
 					padding: 0 1em 0 1em;
 				}
 
-		/* Header */
-
-			#header {
-				padding: 4em 0 3em 0;
-			}
-
 		/* Banner */
 
 			#banner {
@@ -2334,13 +2337,17 @@ div.person header p {
 		/* Header */
 
 			#header {
-				padding: 3.5em 0 3em 0;
+				padding: 10px 30px;
+			}
+
+			#header .logo img {
+				width: 200px;
 			}
 
 		/* Nav */
 
 			#nav {
-				display: none;
+				font-size: 10pt;
 			}
 
 		/* Main */
@@ -2355,7 +2362,52 @@ div.person header p {
 				display: block;
 			}
 
+	}
+
+/* Small */
+
+	@media screen and (max-width: 736px) {
+
+		/* Basic */
+
+			body, input, textarea, select {
+				font-size: 11pt;
+			}
+
+			h2, h3, h4, h5, h6 {
+				font-size: 1.25em;
+			}
+
+		/* Button */
+
+			input[type="button"].large,
+			input[type="submit"].large,
+			input[type="reset"].large,
+			button.large,
+			.button.large {
+				font-size: 1.1em;
+				padding: 0.65em 1.5em 0.65em 1.5em;
+			}
+
+		/* Section/Article */
+
+			section, article {
+				margin-bottom: 20px;
+			}
+
+			header {
+				margin: 0 0 1em 0;
+			}
+
+			footer {
+				margin: 2em 0 0 0;
+			}
+
 		/* Nav */
+
+			#nav {
+				display: none;
+			}
 
 			#page-wrapper {
 				-moz-backface-visibility: hidden;
@@ -2518,52 +2570,16 @@ div.person header p {
 				transform: translateX(0);
 			}
 
-	}
-
-/* Small */
-
-	@media screen and (max-width: 736px) {
-
-		/* Basic */
-
-			body, input, textarea, select {
-				font-size: 11pt;
-			}
-
-			h2, h3, h4, h5, h6 {
-				font-size: 1.25em;
-			}
-
-		/* Button */
-
-			input[type="button"].large,
-			input[type="submit"].large,
-			input[type="reset"].large,
-			button.large,
-			.button.large {
-				font-size: 1.1em;
-				padding: 0.65em 1.5em 0.65em 1.5em;
-			}
-
-		/* Section/Article */
-
-			section, article {
-				margin-bottom: 20px;
-			}
-
-			header {
-				margin: 0 0 1em 0;
-			}
-
-			footer {
-				margin: 2em 0 0 0;
-			}
 
 		/* Box */
 
 			.box {
 				padding: 25px 15px 20px 15px;
 			}
+
+				.box.post {
+					padding: 2em;
+				}
 
 				.box .image.featured {
 					left: 15px;
@@ -2624,7 +2640,7 @@ div.person header p {
 
 			#header {
 				text-align: center;
-				padding: 2em 0;
+				padding: 10px;
 			}
 
 				#header h1 {
@@ -2632,6 +2648,11 @@ div.person header p {
 					font-weight: 900;
 					font-size: 1.75em;
 					letter-spacing: -0.035em;
+				}
+
+				#header .logo img {
+					max-width: 300px;
+					width: auto;
 				}
 
 		/* Banner */
@@ -2668,5 +2689,11 @@ div.person header p {
 			#footer {
 				padding: 40px 0 20px 0;
 			}
+
+		/* Slideshow */
+
+		.image-slideshow-container {
+			max-width: 100%;
+		}
 
 	}
