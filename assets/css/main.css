@@ -1892,7 +1892,7 @@ div.person header p {
 		}
 
 		#header .logo img {
-			width: 300px;
+			width: 250px;
 		}
 
 /* Nav */
@@ -2651,7 +2651,7 @@ div.person header p {
 				}
 
 				#header .logo img {
-					max-width: 300px;
+					max-width: 250px;
 					width: auto;
 				}
 
