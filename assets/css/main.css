@@ -1846,6 +1846,7 @@ ul.divided li:first-child {
 .person .box {
 	padding: 1.25em;
 	flex-grow: 1;
+	text-decoration: none;
 }
 
 .person .box .image.featured {
@@ -1854,7 +1855,7 @@ ul.divided li:first-child {
 	margin: -1.25em -1.25em 1.25em -1.25em;
 }
 
-div.person a:hover {
+div.person:hover h3 {
 	color: #FFCB05;
 }
 
@@ -2138,6 +2139,10 @@ div.person header p {
 	position: relative;
 	text-align: center;
 	line-height: 1em;
+}
+
+li:hover a {
+	color: #FFCB05;
 }
 
 .project > .abstract {
