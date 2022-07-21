@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<!--
+    Dopetrope by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Laboratory for Progress</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <link rel="shortcut icon" type="image/png" href="../../images/logo/LFP_logo_final_JustHand_Blue.png"/>
+
+    </head>
+    <body class="homepage is-preload">
+        <div id="page-wrapper">
+
+            <section id="header">
+                <!-- Logo -->
+                <div class="logo"><a href="https://progress.eecs.umich.edu/"><img src="../../images/logo/two_tone_standard.svg" alt="" /></a></div>
+            </section>
+
+            <section id="main">
+                <div class="container">
+
+                    <!-- Content -->
+                    <article class="box post project">
+                        <!-- TITLE -->
+                        <header>
+                            <h2>ClearPose</h2>
+                            <h3>Large-scale Transparent Object Dataset and Benchmark</h3>
+                        </header>
+
+                        <!-- AUTHORS -->
+                        <div class="row aln-center project-authors">
+                            <!-- Add a div entry exactly as below for each author (keep all classes).
+
+                                The link belonging to the author name should point to the author's webpage. Remove the
+                                link if the author doesn't have one. The affiliation should be the institution the
+                                author belongs to, ie "University of Michigan."
+                            -->
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://sites.google.com/umich.edu/xiaotong-chen/home">Xiaotong Chen</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="http://huijiezh.github.io/">Huijie Zhang</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3>Zeren Yu</h3>
+                                <p>University of Southern California</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://topipari.com">Anthony Opipari</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://web.eecs.umich.edu/~ocj/">Odest Chadwicke Jenkins</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+                        </div>
+
+                        <!-- Path to a pitch image. Can be removed if not needed.
+
+                            If you have images to include on this webpage, you should make a subfolder called "images"
+                            in your project page folder. Then the (relative) path would look like: "images/MY_IMG.png".
+
+                            By default, this image will not take up the whole box, which is more aesthetic. If your
+                            pitch figure is particularly long and you need it to fill the whole horizontal space,
+                            remove the "pitch" class.
+                        -->
+                        <div class="image pitch centered"><img src="images/dataset_sample.png" alt="" /></div>
+
+                        <!-- ABSTRACT -->
+                        <!-- If your pitch figure is wide and you want the abstract to match, add the class "wide" next
+                             to the class "abstract" below.-->
+                        <div class="abstract">
+                            <p>
+                                Transparent objects are ubiquitous in household settings and pose distinct challenges for visual sensing and perception systems. The optical properties of transparent objects leave conventional 3D sensors alone unreliable for object depth and pose estimation. These challenges are highlighted by the shortage of large-scale RGB-Depth datasets focusing on transparent objects in real-world settings. In this work, we contribute a large-scale real-world RGB-Depth transparent object dataset named <i><b>ClearPose</b></i> to serve as a benchmark dataset for segmentation, scene-level depth completion and object-centric pose estimation tasks. The ClearPose dataset contains over 350K labeled real-world RGB-Depth frames and 4M instance annotations covering 63 household objects. The dataset includes object categories commonly used in daily life under various lighting and occluding conditions as well as challenging test scenarios such as cases of occlusion by opaque or translucent objects, non-planar orientations, presence of liquids, etc. We benchmark several state-of-the-art depth completion and object pose estimation deep neural networks on ClearPose.
+                            </p>
+                        </div>
+
+                        <!-- PAPER LINKS -->
+                        <!-- If your pitch figure and abstract are wide, also add the the class "wide" next to the
+                             class "paperlinks" below. Include whatever links are relevant.-->
+                        <div class="paperlinks">
+                            <p>
+                                <a href="https://arxiv.org/abs/2203.03890"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
+                                <!-- Optional. -->
+                                <a href="https://www.youtube.com/watch?v=i8LjxicAaps"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp;
+                                <a href="https://github.com/opipari/ClearPose"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp;
+                                <a href="https://drive.google.com/drive/folders/1Cp2cwwQmntE0aUkmHOLKIlG4Jiz9PQH8?usp=sharing"><i class="fas fa-database"></i>&nbsp;&nbsp;Dataset</a>&nbsp;&nbsp;
+                                <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <article class="box post">
+                        <header>
+                            <h2>Video</h2>
+                        </header>
+
+                        <!-- Link to video on YouTube. -->
+                        <!-- To get your video link, go to your video and click "Share" -> "Embed" to get this iframe.
+                             You can remove width and height. -->
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/i8LjxicAaps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </article>
+
+                    <article class="box post">
+                        <header id="cite">
+                            <h2>Citation</h2>
+                        </header>
+
+                        <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
+                        <div class="citation">
+<pre><code>@inproceedings{chen2022clearpose,
+  title={ClearPose: Large-scale Transparent Object Dataset and Benchmark},
+  author={Chen, Xiaotong and Zhang, Huijie and Yu, Zeren and Opipari, Anthony and Jenkins, Odest Chadwicke},
+  booktitle={European Conference on Computer Vision},
+  year={2022}
+}</code></pre>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="footer">
+
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul class="links">
+                        <li>&copy; 2022. All rights reserved.</li><li>Design: Dopetrope by
+                    <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+
+    </body>
+</html>
