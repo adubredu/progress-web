@@ -28,8 +28,8 @@
                     <article class="box post project">
                         <!-- TITLE -->
                         <header>
-                            <h2>NeRF-Frenemy</h2>
-                            <h3>Co-Opting Adversarial Learning for Autonomy-Directed Co-Design</h3>
+                            <h2>ClearPose</h2>
+                            <h3>Large-scale Transparent Object Dataset and Benchmark</h3>
                         </header>
 
                         <!-- AUTHORS -->
@@ -41,27 +41,22 @@
                                 author belongs to, ie "University of Michigan."
                             -->
                             <div class="col-3 col-4-large col-4-medium col-6-small project-author">
-                                <h3>Stanley Lewis</h3>
+                                <h3><a href="https://sites.google.com/umich.edu/xiaotong-chen/home">Xiaotong Chen</a></h3>
                                 <p>University of Michigan</p>
                             </div>
 
                             <div class="col-3 col-4-large col-4-medium col-6-small project-author">
-                                <h3>Bahaa Aldeeb</h3>
+                                <h3><a href="http://huijiezh.github.io/">Huijie Zhang</a></h3>
                                 <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3>Zeren Yu</h3>
+                                <p>University of Southern California</p>
                             </div>
 
                             <div class="col-3 col-4-large col-4-medium col-6-small project-author">
                                 <h3><a href="https://topipari.com">Anthony Opipari</a></h3>
-                                <p>University of Michigan</p>
-                            </div>
-
-                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
-                                <h3><a href="https://scholar.google.com/citations?hl=en&user=u6HoW-EAAAAJ">Elizabeth Olson</a></h3>
-                                <p>University of Michigan</p>
-                            </div>
-
-                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
-                                <h3><a href="https://cameronkisailus.me/">Cameron Kisailus</a></h3>
                                 <p>University of Michigan</p>
                             </div>
 
@@ -80,47 +75,45 @@
                             pitch figure is particularly long and you need it to fill the whole horizontal space,
                             remove the "pitch" class.
                         -->
-                        <div class="image centered"><img src="./images/arch.png" alt="" /></div>
+                        <div class="image pitch centered"><img src="images/dataset_sample.png" alt="" /></div>
 
                         <!-- ABSTRACT -->
                         <!-- If your pitch figure is wide and you want the abstract to match, add the class "wide" next
                              to the class "abstract" below.-->
-                        <div class="abstract wide">
+                        <div class="abstract">
                             <p>
-                                As the presence of robotics in industries such as warehousing and manufacturing grows, the need arises to optimize product design for downstream autonomous tasks. For example, when considering object segmentation or pose regression, minimizing featureless or symmetric regions of an object can improve the quality of these estimations.
-                                Adding visual fiducial markers can provide landmarks for these tasks, however they can become warped on deformable packaging or distract from designed branding of an object. 
-                                To address this gap, our proposed framework, <i><b>NeRF-Frenemy</b></i>, incorporates techniques introduced by the adversarial machine learning community, but in a cooperative manner to improve the fidelity of manipulation-focused perception tasks. 
-                                NeRF-Frenemy optimizes a neural radiance field (NeRF) representation of an object against a given pre-trained perception model by seeking a minimal perturbation to the implicit space. The resulting changes in the objects' appearance from these alterations to the implicit space can be realized to a modified object appearance which will improve the given model's performance on the object. In this work, we show an initial result of this approach on a member of the YCB Dataset against the image segmentation portion of the PoseCNN model.
+                                Transparent objects are ubiquitous in household settings and pose distinct challenges for visual sensing and perception systems. The optical properties of transparent objects leave conventional 3D sensors alone unreliable for object depth and pose estimation. These challenges are highlighted by the shortage of large-scale RGB-Depth datasets focusing on transparent objects in real-world settings. In this work, we contribute a large-scale real-world RGB-Depth transparent object dataset named <i><b>ClearPose</b></i> to serve as a benchmark dataset for segmentation, scene-level depth completion and object-centric pose estimation tasks. The ClearPose dataset contains over 350K labeled real-world RGB-Depth frames and 4M instance annotations covering 63 household objects. The dataset includes object categories commonly used in daily life under various lighting and occluding conditions as well as challenging test scenarios such as cases of occlusion by opaque or translucent objects, non-planar orientations, presence of liquids, etc. We benchmark several state-of-the-art depth completion and object pose estimation deep neural networks on ClearPose.
                             </p>
                         </div>
 
                         <!-- PAPER LINKS -->
                         <!-- If your pitch figure and abstract are wide, also add the the class "wide" next to the
                              class "paperlinks" below. Include whatever links are relevant.-->
-                        <div class="paperlinks wide">
+                        <div class="paperlinks">
                             <p>
-                                <a href="https://imrss2022.github.io/contributions/lewis.pdf"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
+                                <a href="https://arxiv.org/abs/2203.03890"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
                                 <!-- Optional. -->
-                                <!-- <a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp; -->
-                                <a href="https://github.com/stanlew7531/NerFrenemy"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp;
+                                <a href="https://www.youtube.com/watch?v=i8LjxicAaps"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp;
+                                <a href="https://github.com/opipari/ClearPose"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp;
+                                <a href="https://drive.google.com/drive/folders/1Cp2cwwQmntE0aUkmHOLKIlG4Jiz9PQH8?usp=sharing"><i class="fas fa-database"></i>&nbsp;&nbsp;Dataset</a>&nbsp;&nbsp;
                                 <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
                             </p>
                         </div>
 
-                    <!-- </article> -->
+                    </article>
 
-                    <!-- <article class="box post"> -->
-                        <!-- <header> -->
-                            <!-- <h2>Video</h2> -->
-                        <!-- </header> -->
+                    <article class="box post">
+                        <header>
+                            <h2>Video</h2>
+                        </header>
 
                         <!-- Link to video on YouTube. -->
                         <!-- To get your video link, go to your video and click "Share" -> "Embed" to get this iframe.
                              You can remove width and height. -->
-                        <!-- <div class="video-container"> -->
-                            <!-- <iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PLDutmfAv2lfYZzuxA9BT9Y6rvCofTAGuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <!-- </div> -->
-                    <!-- </article> -->
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/i8LjxicAaps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </article>
 
                     <article class="box post">
                         <header id="cite">
@@ -129,11 +122,11 @@
 
                         <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
                         <div class="citation">
-<pre><code>@article{lewis2022nerfrenemy,
-  author = {Lewis, Stanley and Aldeeb, Bahaa and Opipari, Anthony and Olson, Elizabeth and Kisailus, Cameron and Jenkins, Odest Chadwicke},
-  title = {NeRF-Frenemy: Co-Opting Adversarial Learning for Autonomy-Directed Co-Design},
-  year = {2022},
-  journal={RSS Workshop-Implicit Representations for Robotic Manipulation}
+<pre><code>@inproceedings{chen2022clearpose,
+  title={ClearPose: Large-scale Transparent Object Dataset and Benchmark},
+  author={Chen, Xiaotong and Zhang, Huijie and Yu, Zeren and Opipari, Anthony and Jenkins, Odest Chadwicke},
+  booktitle={European Conference on Computer Vision},
+  year={2022}
 }</code></pre>
                         </div>
                     </article>
