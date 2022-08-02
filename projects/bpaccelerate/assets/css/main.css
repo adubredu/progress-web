@@ -1,0 +1,31 @@
+.image img {
+	width: 50%;
+}
+
+
+#brown_logo {
+	display: flex;
+	justify-content: center;
+}
+
+#mines_logo {
+	display: flex;
+	justify-content: right;
+}
+
+@media screen and (max-width: 980px) {
+/* Header */
+
+	#header .logo img {
+		width: 200px !important;
+	}
+}
+
+@media screen and (max-width: 736px) {
+/* Header */
+
+	#header .logo img {
+		max-width: 150px !important;
+		width: auto;
+	}
+}

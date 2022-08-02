@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<!--
+    Dopetrope by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Laboratory for Progress</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="shortcut icon" type="image/png" href="../../images/logo/LFP_logo_final_JustHand_Blue.png"/>
+
+    </head>
+    <body class="homepage is-preload">
+        <div id="page-wrapper">
+
+            <section id="header">
+                <!-- Logo -->
+                <div class="logo"><a href="https://progress.eecs.umich.edu/"><img src="../../images/logo/two_tone_standard.svg" alt="" /></a></div>
+                <div id="brown_logo" class="logo"><a href="https://cs.brown.edu/"><img src="images/brown.png" alt="" /></a></div>
+                <div id="mines_logo" class="logo"><a href="https://cs.mines.edu/"><img src="images/mines.png" alt="" /></a></div>
+            </section>
+
+            <section id="main">
+                <div class="container">
+
+                    <!-- Content -->
+                    <article class="box post project">
+                        <!-- TITLE -->
+                        <header>
+                            <h2>Hardware Acceleration of Nonparametric Belief Propagation</h2>
+                        </header>
+
+                        <!-- AUTHORS -->
+                        <div class="row aln-center project-authors">
+                            <!-- Add a div entry exactly as below for each author (keep all classes).
+
+                                The link belonging to the author name should point to the author's webpage. Remove the
+                                link if the author doesn't have one. The affiliation should be the institution the
+                                author belongs to, ie "University of Michigan."
+                            -->
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="http://liuyanqi.github.io/">Yanqi Liu</a></h3>
+                                <p>Brown University</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://topipari.com">Anthony Opipari</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://web.eecs.umich.edu/~ocj/">Odest Chadwicke Jenkins</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://people.mines.edu/ribahar/">Iris Bahar</a></h3>
+                                <p>Colorado School of Mines</p>
+                            </div>
+                        </div>
+
+                        <!-- Path to a pitch image. Can be removed if not needed.
+
+                            If you have images to include on this webpage, you should make a subfolder called "images"
+                            in your project page folder. Then the (relative) path would look like: "images/MY_IMG.png".
+
+                            By default, this image will not take up the whole box, which is more aesthetic. If your
+                            pitch figure is particularly long and you need it to fill the whole horizontal space,
+                            remove the "pitch" class.
+                        -->
+                        <div class="image centered"><img src="./images/teaser.png" alt="" /></div>
+
+                        <!-- ABSTRACT -->
+                        <!-- If your pitch figure is wide and you want the abstract to match, add the class "wide" next
+                             to the class "abstract" below.-->
+                        <div class="abstract">
+                            <p>
+                                Probabilistic graphical models (PGMs) have been widely used in computer vision, robotics, and statistics. Generative inference algorithms used to solve PGMs, such as belief propagation (BP), involve integration over high-dimensional variables, which becomes computationally infeasible. Drawing inspiration from particle filters, nonparametric belief propagation (NBP) combines the efficiency of Monte-Carlo sampling to capture the belief space of hidden variables while preserving accuracy and algorithm robustness. In this poster presentation, we describe a novel method to accelerate an NBP algorithm in hardware and evaluate our approach on the 6 degree-of-freedom (DoF) articulated object pose estimation problem. Our two major contributions include 1) identifying three independent computation flows in the algorithm to effectively overlap the two main steps of the algorithm: belief update and message update, and 2) creating deeply pipelined processing units that allow for fine-grained parallelism, which helps to balance the workloads on different computation streams. Results from this study demonstrate that our design achieves both improved runtime and energy efficiency. In particular, we achieved 26X energy saving compared to running the algorithm on a Titan Xp GPU, and 10X runtime speedup and 14X energy saving compared to running on the Jetson AGX . We believe that our FPGA implementation can greatly improve particle-based sampling methods for real time applications.
+                            </p>
+                        </div>
+
+                        <!-- PAPER LINKS -->
+                        <!-- If your pitch figure and abstract are wide, also add the the class "wide" next to the
+                             class "paperlinks" below. Include whatever links are relevant.-->
+                        <div class="paperlinks">
+                            <p>
+                                <!-- <a href="#"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp; -->
+                                <!-- Optional. -->
+                                <!-- <a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp; -->
+                                <!-- <a href="#"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp; -->
+                                <!-- <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a> -->
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <!-- <article class="box post">
+                        <header>
+                            <h2>Video</h2>
+                        </header>
+
+                        <div class="video-container">
+                            <iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PLDutmfAv2lfYZzuxA9BT9Y6rvCofTAGuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </article> -->
+
+                    <!-- <article class="box post">
+                        <header id="cite">
+                            <h2>Citation</h2>
+                        </header>
+
+                        <!- The whitespace between <pre> tags will be preserved exactly how it is in the code. ->
+                        <div class="citation">
+<pre><code>@inproceedings{}</code></pre>
+                        </div>
+                    </article> -->
+
+                </div>
+            </section>
+
+            <section id="footer">
+
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul class="links">
+                        <li>&copy; 2022. All rights reserved.</li><li>Design: Dopetrope by
+                    <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+
+    </body>
+</html>
