@@ -79,7 +79,7 @@
                              to the class "abstract" below.-->
                         <div class="abstract">
                             <p>
-                                Probabilistic graphical models (PGMs) have been widely used in computer vision, robotics, and statistics. Generative inference algorithms used to solve PGMs, such as belief propagation (BP), involve integration over high-dimensional variables, which becomes computationally infeasible. Drawing inspiration from particle filters, nonparametric belief propagation (NBP) combines the efficiency of Monte-Carlo sampling to capture the belief space of hidden variables while preserving accuracy and algorithm robustness. In this poster presentation, we describe a novel method to accelerate an NBP algorithm in hardware and evaluate our approach on the 6 degree-of-freedom (DoF) articulated object pose estimation problem. Our two major contributions include 1) identifying three independent computation flows in the algorithm to effectively overlap the two main steps of the algorithm: belief update and message update, and 2) creating deeply pipelined processing units that allow for fine-grained parallelism, which helps to balance the workloads on different computation streams. Results from this study demonstrate that our design achieves both improved runtime and energy efficiency. In particular, we achieved 26X energy saving compared to running the algorithm on a Titan Xp GPU, and 10X runtime speedup and 14X energy saving compared to running on the Jetson AGX . We believe that our FPGA implementation can greatly improve particle-based sampling methods for real time applications.
+                                Perceiving the position and orientation of objects (i.e., pose estimation) is a crucial prerequisite for robots acting within their natural environment. We present a hardware acceleration approach to enable real-time and energy efficient articulated pose estimation for robots operating in unstructured environments. Our hardware accelerator implements Nonparametric Belief Propagation (NBP) to infer the belief distribution of articulated object poses. Our approach is on average, 26X more energy efficient than a high-end GPU and 11X faster than an embedded low-power GPU implementation. Moreover, we present a <i>Monte-Carlo Perception Library</i> generated from high-level synthesis to enable reconfigurable hardware designs on FPGA fabrics that are better tuned to user-specified scene, resource, and performance constraints.
                             </p>
                         </div>
 
@@ -108,16 +108,21 @@
                         </div>
                     </article> -->
 
-                    <!-- <article class="box post">
+                    <article class="box post">
                         <header id="cite">
                             <h2>Citation</h2>
                         </header>
 
-                        <!- The whitespace between <pre> tags will be preserved exactly how it is in the code. ->
+                        <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
                         <div class="citation">
-<pre><code>@inproceedings{}</code></pre>
+<pre><code>@inproceedings{liu2022bpaccelerate,
+  title={A Reconfigurable Hardware Library for Robot Scene Perception},
+  author={Liu, Yanqi and Opipari, Anthony and Jenkins, Odest Chadwicke and Bahar, R. Iris},
+  booktitle={International Conference on Computer-Aided Design},
+  year={2022}
+}</code></pre>
                         </div>
-                    </article> -->
+                    </article>
 
                 </div>
             </section>
