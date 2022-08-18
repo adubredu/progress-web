@@ -10,7 +10,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="../../assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="shortcut icon" type="image/png" href="../../images/logo/LFP_logo_final_JustHand_Blue.png"/>
 
     </head>
@@ -20,8 +19,6 @@
             <section id="header">
                 <!-- Logo -->
                 <div class="logo"><a href="https://progress.eecs.umich.edu/"><img src="../../images/logo/two_tone_standard.svg" alt="" /></a></div>
-                <div id="brown_logo" class="logo"><a href="https://cs.brown.edu/"><img src="images/brown.png" alt="" /></a></div>
-                <div id="mines_logo" class="logo"><a href="https://cs.mines.edu/"><img src="images/mines.png" alt="" /></a></div>
             </section>
 
             <section id="main">
@@ -31,7 +28,8 @@
                     <article class="box post project">
                         <!-- TITLE -->
                         <header>
-                            <h2>Hardware Acceleration of Nonparametric Belief Propagation</h2>
+                            <h2>TransNet</h2>
+                            <h3>Category-Level Transparent Object Pose Estimation</h3>
                         </header>
 
                         <!-- AUTHORS -->
@@ -42,9 +40,10 @@
                                 link if the author doesn't have one. The affiliation should be the institution the
                                 author belongs to, ie "University of Michigan."
                             -->
+
                             <div class="col-3 col-4-large col-4-medium col-6-small project-author">
-                                <h3><a href="http://liuyanqi.github.io/">Yanqi Liu</a></h3>
-                                <p>Brown University</p>
+                                <h3><a href="https://huijiezh.github.io/">Huijie Zhang</a></h3>
+                                <p>University of Michigan</p>
                             </div>
 
                             <div class="col-3 col-4-large col-4-medium col-6-small project-author">
@@ -53,13 +52,23 @@
                             </div>
 
                             <div class="col-3 col-4-large col-4-medium col-6-small project-author">
-                                <h3><a href="https://web.eecs.umich.edu/~ocj/">Odest Chadwicke Jenkins</a></h3>
+                                <h3><a href="https://sites.google.com/umich.edu/xiaotong-chen/home">Xiaotong Chen</a></h3>
                                 <p>University of Michigan</p>
                             </div>
 
                             <div class="col-3 col-4-large col-4-medium col-6-small project-author">
-                                <h3><a href="https://people.mines.edu/ribahar/">Iris Bahar</a></h3>
-                                <p>Colorado School of Mines</p>
+                                <h3><a href="https://jiyuezh.github.io">Jiyue Zhu</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3>Zeren Yu</h3>
+                                <p>University of Southern California</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://web.eecs.umich.edu/~ocj/">Odest Chadwicke Jenkins</a></h3>
+                                <p>University of Michigan</p>
                             </div>
                         </div>
 
@@ -72,14 +81,14 @@
                             pitch figure is particularly long and you need it to fill the whole horizontal space,
                             remove the "pitch" class.
                         -->
-                        <div class="image centered"><img src="./images/teaser.png" alt="" /></div>
+                        <div class="image centered"><img src="images/teaser.jpg" alt="" /></div>
 
                         <!-- ABSTRACT -->
                         <!-- If your pitch figure is wide and you want the abstract to match, add the class "wide" next
                              to the class "abstract" below.-->
                         <div class="abstract">
                             <p>
-                                Perceiving the position and orientation of objects (i.e., pose estimation) is a crucial prerequisite for robots acting within their natural environment. We present a hardware acceleration approach to enable real-time and energy efficient articulated pose estimation for robots operating in unstructured environments. Our hardware accelerator implements Nonparametric Belief Propagation (NBP) to infer the belief distribution of articulated object poses. Our approach is on average, 26X more energy efficient than a high-end GPU and 11X faster than an embedded low-power GPU implementation. Moreover, we present a <i><b>Monte-Carlo Perception Library</b></i> generated from high-level synthesis to enable reconfigurable hardware designs on FPGA fabrics that are better tuned to user-specified scene, resource, and performance constraints.
+                                Transparent objects present multiple distinct challenges to visual perception systems. First, their lack of distinguishing visual features makes transparent objects harder to detect and localize than opaque objects. Even humans find certain transparent surfaces with little specular reflection or refraction, e.g. glass doors, difficult to perceive. A second challenge is that common depth sensors typically used for opaque object perception cannot obtain accurate depth measurements on transparent objects due to their unique reflective properties. Stemming from these challenges, we observe that transparent object instances within the same category (e.g. cups) look more similar to each other than to ordinary opaque objects of that same category. Given this observation, the present paper sets out to explore the possibility of category-level transparent object pose estimation rather than instance-level pose estimation. We propose <i><b>TransNet</b></i>, a two-stage pipeline that learns to estimate category-level transparent object pose using localized depth completion and surface normal estimation. TransNet is evaluated in terms of pose estimation accuracy on a recent, large-scale transparent object dataset and compared to a state-of-the-art category-level pose estimation approach. Results from this comparison demonstrate that TransNet achieves improved pose estimation accuracy on transparent objects and key findings from the included ablation studies suggest future directions for performance improvements.
                             </p>
                         </div>
 
@@ -92,6 +101,7 @@
                                 <!-- Optional. -->
                                 <!-- <a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp; -->
                                 <!-- <a href="#"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp; -->
+                                <!-- <a href="#"></i>&nbsp;&nbsp;Dataset</a>&nbsp;&nbsp; -->
                                 <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
                             </p>
                         </div>
@@ -103,8 +113,11 @@
                             <h2>Video</h2>
                         </header>
 
+                        <!- Link to video on YouTube. ->
+                        <!- To get your video link, go to your video and click "Share" -> "Embed" to get this iframe.
+                             You can remove width and height. ->
                         <div class="video-container">
-                            <iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PLDutmfAv2lfYZzuxA9BT9Y6rvCofTAGuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/i8LjxicAaps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </article> -->
 
@@ -115,10 +128,10 @@
 
                         <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
                         <div class="citation">
-<pre><code>@inproceedings{liu2022bpaccelerate,
-  title={A Reconfigurable Hardware Library for Robot Scene Perception},
-  author={Liu, Yanqi and Opipari, Anthony and Jenkins, Odest Chadwicke and Bahar, R. Iris},
-  booktitle={International Conference on Computer-Aided Design},
+<pre><code>@inproceedings{zhang2022transnet,
+  title={TransNet: Category-Level Transparent Object Pose Estimation},
+  author={Zhang, Huijie and Opipari, Anthony and Chen, Xiaotong and Zhu, Jiyue and Yu, Zeren and Jenkins, Odest Chadwicke},
+  booktitle={ECCV 7th International Workshop on Recovering 6D Object Pose},
   year={2022}
 }</code></pre>
                         </div>
