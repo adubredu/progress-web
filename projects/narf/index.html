@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>NARF: Neural Articulated Radiance Fields</title>
+        <title>NARF22: Neural Articulated Radiance Fields</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="../../assets/css/main.css" />
@@ -28,7 +28,7 @@
                     <article class="box post project">
                         <!-- TITLE -->
                         <header>
-                            <h2>NARF: Neural Articulated Radiance Fields for Configuration-Aware Rendering</h2>
+                            <h2>NARF22: Neural Articulated Radiance Fields for Configuration-Aware Rendering</h2>
                         </header>
 
                         <!-- AUTHORS -->
@@ -53,22 +53,16 @@
                         <!-- ABSTRACT -->
                         <div class="abstract">
                             <p>
-                                Articulated objects pose a unique challenge for robotic perception and manipulation.
-                                Their larger number of degrees-of-freedom makes localization and other tasks more computationaly difficult, while also making the process of real-world dataset collection unscalable.
-                                With the aim of introducing a tool to address these scalability issues, we propose Neural Articulated Radiance Fields (NARF): a pipeline which uses a fully differentiable, configuration parameterized Neural Radiance Field (NeRF) as a means of providing high quality renderings of articulated objects.
-                                NARF requires no explicit knowledge of the object structure at inference time.
-                                We propose a parts-based training mechanism which allows for creating object rendering models that generalize well across the configuration space even if the underlying training data has as few as one configuration represented.
-                                We demonstrate the usefulness of this approach by training configurable renderers on a real-world articulated tool data collected via a Fetch Mobile Manipulator robot.
-                                We then show the applicability of the model to generative or gradient-descent based inference methods by extracting configuration estimates and fine tuning object pose from an initial standard 6 degree-of-freedom rigid-body pose estimate.
+                                Articulated objects pose a unique challenge for robotic perception and manipulation. Their increased number of degrees-of-freedom makes tasks such as localization computationally difficult, while also making the process of real-world dataset collection unscalable. With the aim of addressing these scalability issues, we propose Neural Articulated Radiance Fields (NARF22), a pipeline which uses a fully-differentiable, configuration-parameterized Neural Radiance Field (NeRF) as a means of providing high quality renderings of articulated objects. NARF22 requires no explicit knowledge of the object structure at inference time. We propose a two-stage parts-based training mechanism which allows the object rendering models to generalize well across the configuration space even if the underlying training data has as few as one configuration represented. We demonstrate the efficacy of NARF22 by training configurable renderers on a real-world articulated tool dataset collected via a Fetch mobile manipulation robot. We show the applicability of the model to gradient-based inference methods through a configuration estimation and 6 degree-of-freedom pose refinement task.
                             </p>
                         </div>
 
                         <!-- Links. -->
                         <div class="paperlinks">
                             <p>
-                                <a href="#"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp;
+                                <a href="https://arxiv.org/abs/2210.01166"><i class="far fa-file-pdf"></i> Read the Paper</a> &nbsp;&nbsp;
                                 <!-- Optional. -->
-                                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a>
+                                <!-- <a href="#"><i class="fas fa-chalkboard-teacher"></i> Watch the Talk</a> -->
                             </p>
                         </div>
 
@@ -168,21 +162,22 @@
                         <!-- </div> -->
                     <!-- </article> -->
 
-                    <!-- <article class="box post"> -->
-                        <!-- <header> -->
-                            <!-- <h2>Citation</h2> -->
-                        <!-- </header> -->
+                    <article class="box post">
+                        <header>
+                            <h2>Citation</h2>
+                        </header>
 
                         <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
-                        <!-- <div class="citation"> -->
-<!-- <pre><code>@inproceedings{tag, -->
-  <!-- author = {Last, First and Last, First and ...}, -->
-  <!-- title = {Paper title}, -->
-  <!-- year = {2020}, -->
-  <!-- ... -->
-<!-- }</code></pre> -->
-                        <!-- </div> -->
-                    <!-- </article> -->
+                        <div class="citation">
+<pre><code>@inproceedings{lewis2022narf,
+  author = {Lewis, Stanley and Pavlasek, Jana and Jenkins, Odest Chadwicke},
+  title = {{NARF22}: Neural Articulated Radiance Fields for Configuration-Aware Rendering},
+  year = {2022},
+  booktitle = {International Conference on Intelligent Robots and Systems ({IROS})},
+  organization = {IEEE}
+}</code></pre>
+                        </div>
+                    </article>
 
                 <!-- </div> -->
             </section>
